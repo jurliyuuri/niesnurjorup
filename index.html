@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="common.css">
 <script src="isHarmonic.js"></script>
+<script src="drawTable.js"></script>
 <style>
 .s3{background-color: #6d9eeb;}
 .s2{background-color: #c9daf8;}
@@ -50,6 +51,7 @@
 <p>調名としては、ここからとって「一開一閉」「二開三閉」とかにすればいいんじゃないかなという気がしている。</p>
 <p>さて、5音で移調するか7音で移調するかで「開」と取るか「閉」と取るか変わってくるなこれ。</p>
 <p>まあ、7音移調だと「開三⇄閉四」「開五⇄閉一」間の移動が発生することになるが、それでは理論体系上美しくないからなぁ。やはり5音ベースで作られた音階は5音で移調した方が『体系としては』綺麗だ。とはいえ、現実問題としては7音がメインだろうけど。</p>
+<p>なお、以上のものは、<a href="https://docs.google.com/spreadsheets/d/1Q_Xms7CeJNHMTuty5NlrdqTK9W3kG-gXx7LaoHK_o3I/edit#gid=1863710470">Google Spreadsheet</a>にまとめてある。</p>
 <h3>3-2. ピタゴラス音階</h3>
 <p>三分損益法としても知られているやつである。周波数を1.5倍していくことで「一」→「四」→「二」→「五」→「三」を作っていく方式である。</p>
 <table>
@@ -58,6 +60,15 @@
 </table>
 
 <p>さて、このうちどれが調和するかという表を書かなきゃなのだが、手動で書くのめんどいなぁ。自動化するか。</p>
-
-<p>以上のものは、<a href="https://docs.google.com/spreadsheets/d/1Q_Xms7CeJNHMTuty5NlrdqTK9W3kG-gXx7LaoHK_o3I/edit#gid=1863710470">Google Spreadsheet</a>にまとめてある。</p>
+<p>「分母が1,2,3,4,5,6,8,9、分子が1,2,3,4,5,6,8,9,10,12,16のどれかである数」との比が0.9905と1.0095の間にあれば調和、と設定すれば、平均律は半音と√2以外は調和判定で、純正律の81/64や40/27や32/27は非調和。</p>
+<p>順序</p>
+<script type="text/javascript">
+	drawTable([['一',1],['二',9/8],['三',81/64],['四',3/2],['五',27/16]]);
+</script>
+<p>構成順</p>
+<script type="text/javascript">
+	drawTable([['一',1],['四',3/2],['二',9/8],['五',27/16],['三',81/64]]);
+</script>
+<p>なるほど。</p>
+<h3>3-3. 純正律</h3>
 </body>
