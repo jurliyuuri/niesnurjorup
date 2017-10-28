@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>音楽について考察する</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="common.css">
+<script src="isHarmonic.js"></script>
+<style>
+.s3{background-color: #6d9eeb;}
+.s2{background-color: #c9daf8;}
+.s1{background-color: #f4cccc;}
+</style>
+</head>
+<body class="cool">
+<h1>音楽について考察する</h1>
+<p>以下のは雑記・考察ログです。<strong style="font-size: 120%">すでに絶滅した過去の仕様などが数多く含まれていることがあります。</strong></p>
+
+<h2>0. 経緯</h2>
+<p>2017年7月26日に起きた<a href="https://togetter.com/li/1133676">古理字存続論争</a>によって、リパーシェをtkxs順に配置することは非真理設定となった。しかるに、理語辞書には「ドレミファソラシ」がte ke xa sa nje vi fyとして登録されている。</p>
+<p>リパーシェをtkxs順に配置することが非真理設定である以上、te ke xa saなどという呼び方も当然非真理設定である。ということで、これらの単語を廃し、これを機に音楽史をちゃんと考えていこう、という流れになったのが経緯である。</p>
+
+<h2>1. Skype会議</h2>
+<p><a href="https://github.com/jurliyuuri/niesnurjorup/blob/master/%E9%9F%B3%E6%A5%BD%E5%8F%B2%E6%94%B9%E5%AE%9A.txt">Skypeで話し合った</a>。</p>
+<p>fafs falira sashimi曰く、「ファイクレオネにおける音楽発達の原初はラネーメ音楽とリパラオネ音楽に分かれる。ラネーメ音楽の方が早いのではと考えラネーメ語→ヴェフィス語から借入と考えるのが妥当」ということで、リパライン語での呼び名はヴェフィス語からの借入となった。</p>
+<p>ラネーメでの呼び方は次のようになった。</p>
+<table border="1" cellpadding="3"><tr><td>現世</td><td class="s1">ド</td><td class="s1">ド♯</td><td class="s1">レ</td><td class="s1">レ♯</td><td class="s1">ミ</td><td class="s1">ファ</td><td class="s1">ファ♯</td><td class="s1">ソ</td><td class="s1">ソ♯</td><td class="s1">ラ</td><td class="s1">ラ♯</td><td class="s1">シ
+</td></tr><tr><td></td><td class="s1"></td><td class="s1">レ♭</td><td class="s1"></td><td class="s1">ミ♭</td><td class="s1"></td><td class="s1"></td><td class="s1">ソ♭</td><td class="s1"></td><td class="s1">ラ♭</td><td class="s1"></td><td class="s1">シ♭</td><td class="s1">
+</td></tr><tr><td>羅</td><td class="s2">一</td><td class="s2">開一</td><td class="s2">二</td><td class="s2">開二</td><td class="s2">三</td><td class="s3">開三</td><td class="s3"></td><td class="s2">四</td><td class="s2">開四</td><td class="s2">五</td><td class="s3">開五</td><td class="s3">
+</td></tr><tr><td></td><td class="s2"></td><td class="s2">閉二</td><td class="s2"></td><td class="s2">閉三</td><td class="s2"></td><td class="s3"></td><td class="s3">閉四</td><td class="s2"></td><td class="s2">閉五</td><td class="s2"></td><td class="s3"></td><td class="s3">閉一
+</td></tr><tr><td>パイグ読み</td><td>et2</td><td>nam2 et2</td><td>ik2</td><td>nam2 ik2</td><td>om2</td><td>nam2 om2</td><td></td><td>ap1</td><td>nam2 ap1</td><td>un1</td><td>nam2 un1</td><td>
+</td></tr><tr><td></td><td></td><td>in2 ik2</td><td></td><td>in2 om2</td><td></td><td></td><td>in2 ap1</td><td></td><td>in2 un1</td><td></td><td></td><td>in1 un1
+</td></tr><tr><td>再構音</td><td>las</td><td></td><td>rik</td><td></td><td>lumi</td><td></td><td></td><td>ngam</td><td></td><td>slqna</td><td></td><td></td></tr></table>
+<p>なお、「開／閉」を使うのは「声筒」（ラネーメの笛）が原因だそうだ。</p>
+<p>さて、ここで「<a href="https://gist.github.com/sozysozbot/fe21c1e9f969f99133cf8d11441d69a5">ファイクレオネと現世の間の単位の対応</a>」と比べてみると、「一」の音が243stu^(-1)〜244.3stu^(-1)、現世の単位でいうなら300.27Hz〜301.89Hzとなる。</p>
+
+<h2>2. 「平均化された音名」</h2>
+<p>さて、この「一」「二」「三」「四」「五」の間って不均等に空いているので、せっかくなら均等になるようなやつも考えてみた。まあ一種のお遊びにすぎないが。</p>
+<img src="img/equal_step.png" width="432"/>
+<img src="img/equal_step2.png" width="864"/>
+<p>「平均表記」とでも呼ぼうかなぁ、平均律と無限に紛らわしいけど。</p>
+<p>ちなみに、これは整数値での最小二乗法による。小数値含めた場合ってどうなるんだろう。</p>
+
+<h2>3. 移調</h2>
+<h3>3-1. 基礎</h3>
+<p>さて、歴史的経緯を逆順に辿って、まず12平均律の元で移調をしよう。異名同音について考えて、そこから純正律とかでの異名異音について考えよう。</p>
+<p>長音階7音:</p>
+<img src="img/7sound.png" width="432"/>
+<p>長音階5音（ヨナ抜き；元来の一二三四五の音階）:</p>
+<img src="img/5sound.png" width="432"/>
+<p>調名としては、ここからとって「一開一閉」「二開三閉」とかにすればいいんじゃないかなという気がしている。</p>
+<p>さて、5音で移調するか7音で移調するかで「開」と取るか「閉」と取るか変わってくるなこれ。</p>
+<p>まあ、7音移調だと「開三⇄閉四」「開五⇄閉一」間の移動が発生することになるが、それでは理論体系上美しくないからなぁ。やはり5音ベースで作られた音階は5音で移調した方が『体系としては』綺麗だ。とはいえ、現実問題としては7音がメインだろうけど。</p>
+<h3>3-2. ピタゴラス音階</h3>
+<p>三分損益法としても知られているやつである。周波数を1.5倍していくことで「一」→「四」→「二」→「五」→「三」を作っていく方式である。</p>
+<table>
+	<tr><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td></tr>
+	<tr><td>1</td><td>9/8</td><td>81/64</td><td>3/2</td><td>27/16</td></tr>
+</table>
+
+<p>さて、このうちどれが調和するかという表を書かなきゃなのだが、手動で書くのめんどいなぁ。自動化するか。</p>
+
+<p>以上のものは、<a href="https://docs.google.com/spreadsheets/d/1Q_Xms7CeJNHMTuty5NlrdqTK9W3kG-gXx7LaoHK_o3I/edit#gid=1863710470">Google Spreadsheet</a>にまとめてある。</p>
+</body>
