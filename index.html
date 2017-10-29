@@ -175,11 +175,11 @@
 <p>もうちょい見やすい方法で考えをしてみるか。Wikipediaにあった表を参考に</p>
 
 <table border="1" cellpadding="3" cellspacing="0">
-	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/24</td><td>閉五<br>25/16</td><td>閉三<br>75/64</td><td>層閉一<br>225/256</td><td></td><td></td></tr>
+	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/24</td><td>閉五<br>25/16</td><td>閉三<br>75/64</td><td>再閉一<br>225/256</td><td></td><td></td></tr>
 	<tr><td>一<br>80/81</td><td>四<br>40/27</td><td class="s2">二<br>10/9</td><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td><td>閉二<br>135/128</td><td></td></tr>
 	<tr><td>開四<br>128/81</td><td>開二<br>32/27</td><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td><td>五<br>27/16</td><td>三<br>81/64</td></tr>
-	<tr><td></td><td>層開五<br>256/135</td><td>層開三<br>64/45</td><td>開一<br>16/15</td><td class="s2">開四<br>8/5</td><td class="s2">開二<br>6/5</td><td class="s2">開五<br>9/5</td><td>開三<br>27/20</td><td>一<br>81/80</td></tr>
-	<tr><td></td><td></td><td>層開一<br>256/225</td><td>層開四<br>128/75</td><td>層開二<br>32/25</td><td>層開五<br>48/25</td><td>層開三<br>36/25</td><td>開一<br>27/25<br></td><td>開四<br>81/50</td></tr>
+	<tr><td></td><td>再開五<br>256/135</td><td>再開三<br>64/45</td><td>開一<br>16/15</td><td class="s2">開四<br>8/5</td><td class="s2">開二<br>6/5</td><td class="s2">開五<br>9/5</td><td>開三<br>27/20</td><td>一<br>81/80</td></tr>
+	<tr><td></td><td></td><td>再開一<br>256/225</td><td>再開四<br>128/75</td><td>再開二<br>32/25</td><td>再開五<br>48/25</td><td>再開三<br>36/25</td><td>開一<br>27/25<br></td><td>開四<br>81/50</td></tr>
 </table>
 <p>（この表つくるのにひたすら時間がかかった。自動化すべきだったな）</p>
 <p>この青い部分が一と調和する部分。結構時間かけて作ったのに25の行とかが見事に全部ハズレでアである。まあ純正律のコンマを排除するように閾値を設定しているのだから当然か。</p>
@@ -199,7 +199,7 @@
 	<tr><td></td><td class="s2">■</td><td></td></tr>
 	<tr><td></td><td></td><td class="s2">■</td></tr>
 </table>	</td></tr></table>
-<p>層開とかいう謎用語は避けたいだろうし、調和を考えて真ん中15マスマイナス層開三に着目するのは当然だろうな。</p>
+<p>再開とかいう謎用語は避けたいだろうし、調和を考えて真ん中15マスマイナス再開三に着目するのは当然だろうな。</p>
 <table border="1" cellpadding="3" cellspacing="0">
 	<tr><td class="s2">二<br>10/9</td><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td></tr>
 	<tr><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td></tr>
@@ -238,6 +238,6 @@
 </td></tr><tr><td>羅</td><td class="s2">一</td><td class="s2">開一</td><td class="s2">二</td><td class="s2">開二</td><td class="s2">三</td><td class="s3">開三</td><td class="s3"></td><td class="s2">四</td><td class="s2">開四</td><td class="s2">五</td><td class="s3">開五</td><td class="s3">
 </td></tr><tr><td></td><td class="s2"></td><td class="s2">(閉二)</td><td class="s2"></td><td class="s2">(閉三)</td><td class="s2"></td><td class="s3"></td><td class="s3">閉四</td><td class="s2"></td><td class="s2">(閉五)</td><td class="s2"></td><td class="s3"></td><td class="s3">閉一
 </td></tr></table>
-<p>表の現世側からはシ♯ミ♯ラ♯ソ♭ド♭ファ♭の6つの名前が消えているが、現世には7*3種があるのに対しラネーメには5*3種のみがあるのだからこの差は必然である。不足している分は平均律を使えば解決できるし、そうでなくとも層開・層閉を用いれば良いのだから実用上・運用上の問題はない。</p>
+<p>表の現世側からはシ♯ミ♯ラ♯ソ♭ド♭ファ♭の6つの名前が消えているが、現世には7*3種があるのに対しラネーメには5*3種のみがあるのだからこの差は必然である。不足している分は平均律を使えば解決できるし、そうでなくとも再開・再閉を用いれば良いのだから実用上・運用上の問題はない。</p>
 
 </body>
