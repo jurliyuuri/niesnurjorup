@@ -72,7 +72,7 @@
 </script>
 <p>なるほど。</p>
 <h3>3-3. 純正律</h3>
-<p>純正律というか、いわゆるFive-limit tuningですね。まあ81/64を80/64 = 5/4にしたがるのはどの世界でも同じでしょ。</p>
+<p>81/64を80/64 = 5/4にしたがるのはどの世界でも同じでしょ。</p>
 <p>まず三だけずらした場合。</p>
 <table>
 	<tr><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td></tr>
@@ -100,7 +100,7 @@
 	drawTable([['一',1],['二',10/9],['三',5/4],['四',3/2],['五',5/3]]);
 </script>
 <p>ふむふむ。</p>
-<p>現世のとの対応を調べてみると、三と五をずらすのが長音階用（FAC, CEG, GBDが4:5:6なので）、二三五をずらすのが短音階用（DFA, ACE, EGBが1/6:1/5:1/4なので）らしい。ふむぅ。</p>
+<p>現世のとの対応を調べてみると、三と五をずらすのが長音階用（FAC, CEG, GBDが4:5:6なので）のPtolemy's intense diatonic scale、二三五をずらすのが短音階用（DFA, ACE, EGBが1/6:1/5:1/4なので）らしい。ふむぅ。</p>
 <p>とはいえ、この状況だとまだFとかBを扱えていないんよな。ということで一旦ピタゴラス音律に戻る。</p>
 <h3>3-3. ピタゴラス音律part2</h3>
 <p>とりあえず移調表を見よう。</p>
@@ -138,4 +138,48 @@
 <p>んー。</p>
 <p>んーー。</p>
 <p>先に純正律を考えよう。</p>
+<h3>3-5. 純正律again</h3>
+<p>ピタゴラス音律の</p>
+<table>
+	<tr><td>開一</td><td>開四</td><td>開二</td><td>開五</td><td>開三</td><td>一</td><td>四</td><td>二</td><td>五</td><td>三</td><td>閉一</td><td>閉四</td><td>閉二</td><td>閉五</td><td>閉三</td></tr>
+	<tr><td>256/243</td><td>128/81</td><td>32/27</td><td>16/9</td><td>4/3</td><td>1</td><td>3/2</td><td>9/8</td><td>27/16</td><td>81/64</td><td>243/128</td><td>729/512</td><td>2187/2048</td><td>6561/4096</td><td>19683/16384</td></tr>
+</table>
+<p>の中に出てくる81/64を5/4で近似するのが純正律。<a href="https://en.wikipedia.org/wiki/Ptolemy%27s_intense_diatonic_scale">Ptolemy's intense diatonic scale</a>は</p>
+<table>
+	<tr><td>開一</td><td>開四</td><td>開二</td><td>開五</td><td>開三</td><td>一</td><td>四</td><td>二</td><td>五</td><td>三</td><td>閉一</td><td>閉四</td><td>閉二</td><td>閉五</td><td>閉三</td></tr>
+	<tr><td>-</td><td>-</td><td>-</td><td>-</td><td>4/3</td><td>1</td><td>3/2</td><td>9/8</td><td><strong>5/3</strong></td><td><strong>5/4</strong></td><td><strong>15/8</strong></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+</table>
+<p>他にも、<a href="https://en.wikipedia.org/wiki/Five-limit_tuning">二を9/8でなく10/9にするやつ</a>もあるそうだ。その場合は</p>
+<table>
+	<tr><td>開一</td><td>開四</td><td>開二</td><td>開五</td><td>開三</td><td>一</td><td>四</td><td>二</td><td>五</td><td>三</td><td>閉一</td><td>閉四</td><td>閉二</td><td>閉五</td><td>閉三</td></tr>
+	<tr><td>-</td><td>-</td><td>-</td><td>-</td><td>4/3</td><td>1</td><td>3/2</td><td><strong>10/9</strong></td><td><strong>5/3</strong></td><td><strong>5/4</strong></td><td><strong>15/8</strong></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+</table>
+<p>開五・閉四を含めてちょっくら表にしてみるか。まず開五=16/9, 二=9/8, 閉四=45/32</p>
+<script type="text/javascript">
+	drawTable([['開五',16/9],['開三',4/3],['一',1],['四',3/2],['二',9/8],['五',5/3],['三',5/4],['閉一',15/8],['閉四',45/32],]);
+</script>
+<p>3/2が五段階続くのを防ぐため開五=9/5にした場合</p>
+<script type="text/javascript">
+	drawTable([['開五',9/5],['開三',4/3],['一',1],['四',3/2],['二',9/8],['五',5/3],['三',5/4],['閉一',15/8],['閉四',45/32],]);
+</script>
+<p>次に開五=16/9, 二=10/9, 閉四=45/32</p>
+<script type="text/javascript">
+	drawTable([['開五',16/9],['開三',4/3],['一',1],['四',3/2],['二',10/9],['五',5/3],['三',5/4],['閉一',15/8],['閉四',45/32],]);
+</script>
+<p>3/2が五段階続くのを防ぐため閉四=25/18</p>
+<script type="text/javascript">
+	drawTable([['開五',16/9],['開三',4/3],['一',1],['四',3/2],['二',10/9],['五',5/3],['三',5/4],['閉一',15/8],['閉四',25/18],]);
+</script>				
+
+<p>むー。</p>
+<p>もうちょい見やすい方法で考えをしてみるか。Wikipediaにあった表を参考に</p>
+
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/12</td><td>閉五<br>25/16</td><td>閉三<br>75/64</td><td>層閉一<br>225/256</td><td></td><td></td></tr>
+	<tr><td>一<br>80/81</td><td>四<br>40/27</td><td>二<br>10/9</td><td>五<br>5/3</td><td>三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td><td>閉二<br>135/128</td><td></td></tr>
+	<tr><td>開四<br>128/81</td><td>開二<br>32/27</td><td>開五<br>16/9</td><td>開三<br>4/3</td><td>一<br>1</td><td>四<br>3/2</td><td>二<br>9/8</td><td>五<br>27/16</td><td>三<br>81/64</td></tr>
+	<tr><td></td><td>層開五<br>256/135</td><td>層開三<br>64/45</td><td>開一<br>16/15</td><td>開四<br>8/5</td><td>開二<br>6/5</td><td>開五<br>9/5</td><td>開三<br>27/20</td><td>一<br>81/80</td></tr>
+	<tr><td></td><td></td><td>層開一<br>256/225</td><td>層開四<br>128/75</td><td>層開二<br>32/25</td><td>層開五<br>48/25</td><td>層開三<br>36/25</td><td>開一<br>27/25<br></td><td>開四<br>81/50</td></tr>
+</table>
+<p>（この表つくるのにひたすら時間がかかった。自働化すべきだったな）</p>
 </body>
