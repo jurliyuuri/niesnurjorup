@@ -175,11 +175,51 @@
 <p>もうちょい見やすい方法で考えをしてみるか。Wikipediaにあった表を参考に</p>
 
 <table border="1" cellpadding="3" cellspacing="0">
-	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/12</td><td>閉五<br>25/16</td><td>閉三<br>75/64</td><td>層閉一<br>225/256</td><td></td><td></td></tr>
-	<tr><td>一<br>80/81</td><td>四<br>40/27</td><td>二<br>10/9</td><td>五<br>5/3</td><td>三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td><td>閉二<br>135/128</td><td></td></tr>
-	<tr><td>開四<br>128/81</td><td>開二<br>32/27</td><td>開五<br>16/9</td><td>開三<br>4/3</td><td>一<br>1</td><td>四<br>3/2</td><td>二<br>9/8</td><td>五<br>27/16</td><td>三<br>81/64</td></tr>
-	<tr><td></td><td>層開五<br>256/135</td><td>層開三<br>64/45</td><td>開一<br>16/15</td><td>開四<br>8/5</td><td>開二<br>6/5</td><td>開五<br>9/5</td><td>開三<br>27/20</td><td>一<br>81/80</td></tr>
+	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/24</td><td>閉五<br>25/16</td><td>閉三<br>75/64</td><td>層閉一<br>225/256</td><td></td><td></td></tr>
+	<tr><td>一<br>80/81</td><td>四<br>40/27</td><td class="s2">二<br>10/9</td><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td><td>閉二<br>135/128</td><td></td></tr>
+	<tr><td>開四<br>128/81</td><td>開二<br>32/27</td><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td><td>五<br>27/16</td><td>三<br>81/64</td></tr>
+	<tr><td></td><td>層開五<br>256/135</td><td>層開三<br>64/45</td><td>開一<br>16/15</td><td class="s2">開四<br>8/5</td><td class="s2">開二<br>6/5</td><td class="s2">開五<br>9/5</td><td>開三<br>27/20</td><td>一<br>81/80</td></tr>
 	<tr><td></td><td></td><td>層開一<br>256/225</td><td>層開四<br>128/75</td><td>層開二<br>32/25</td><td>層開五<br>48/25</td><td>層開三<br>36/25</td><td>開一<br>27/25<br></td><td>開四<br>81/50</td></tr>
 </table>
-<p>（この表つくるのにひたすら時間がかかった。自働化すべきだったな）</p>
+<p>（この表つくるのにひたすら時間がかかった。自動化すべきだったな）</p>
+<p>この青い部分が一と調和する部分。結構時間かけて作ったのに25の行とかが見事に全部ハズレでアである。まあ純正律のコンマを排除するように閾値を設定しているのだから当然か。</p>
+<table>
+	<tr><td>メジャーコード</td><td>マイナーコード</td><td>ディミニッシュ</td></tr>
+	<tr><td>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">■</td><td></td></tr>
+	<tr><td class="s2">■</td><td class="s2">■</td></tr>
+</table>	</td><td>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">■</td><td class="s2">■</td></tr>
+	<tr><td></td><td class="s2">■</td></tr>
+</table>	</td><td>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">■</td><td></td><td></td></tr>
+	<tr><td></td><td class="s2">■</td><td></td></tr>
+	<tr><td></td><td></td><td class="s2">■</td></tr>
+</table>	</td></tr></table>
+<p>層開とかいう謎用語は避けたいだろうし、調和を考えて真ん中15マスマイナス層開三に着目するのは当然だろうな。</p>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">二<br>10/9</td><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td></tr>
+	<tr><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td></tr>
+	<tr><td></td><td>開一<br>16/15</td><td class="s2">開四<br>8/5</td><td class="s2">開二<br>6/5</td><td class="s2">開五<br>9/5</td></tr>
+</table>
+<p>ものすごーく<a href="https://en.wikipedia.org/wiki/Five-limit_tuning#Twelve_tone_scale">Wikipedia</a>の表に似てきたが、まあそりゃ異世界でも数学は同じですからねぇ。</p>
+<p>さて、あとはこの「二」「開五」においてどちらを採用するかという問題が残るわけだが、まあ両方左のを採用するのはメリットがないわけで、「左二；右開五」「右二；左開五」「右二；右開五」のどれかになるだろう。ということでダイスロール。</p>
+<p>ダイスロール曰く「右二；左開五」と。なるほどなるほど。ということで、最終的な表は次のような感じ。</p>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td></td><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td></tr>
+	<tr><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td></tr>
+	<tr><td></td><td>開一<br>16/15</td><td class="s2">開四<br>8/5</td><td class="s2">開二<br>6/5</td><td></td></tr>
+</table>
+<p>順番に並べるなら</p>
+<table border="1" style="text-align:center">
+	<tr><td colspan="2">一<br>1</td><td colspan="2">開一<br>16/15</td><td colspan="2">二<br>9/8</td><td colspan="2">開二<br>6/5</td><td colspan="2">三<br>5/4</td><td colspan="2">開三<br>4/3</td></td><td colspan="2">閉四<br>45/32</td><td colspan="2">四<br>3/2</td><td colspan="2">開四<br>8/5</td><td colspan="2">五<br>5/3</td><td colspan="2">開五<br>16/9</td><td colspan="2">閉一<br>15/8</td><td colspan="2">一<br>2</td></tr>
+	<tr><td colspan="1"></td><td colspan="2">16/15</td><td colspan="2">135/128</td><td colspan="2">16/15</td><td colspan="2">25/24</td><td colspan="2">16/15</td><td colspan="2">135/128</td><td colspan="2">16/15</td><td colspan="2">16/15</td><td colspan="2">25/24</td><td colspan="2">16/15</td><td colspan="2">135/128</td><td colspan="2">16/15</td><td colspan="1"></td></tr>
+	<tr><td colspan="1"></td><td colspan="4">9/8</td><td colspan="4">10/9</td><td colspan="6">6/5</td><td colspan="4">10/9</td><td colspan="6">6/5</td><td colspan="1"></td></tr>
+</table>
+<p>こう見ると、開がやっぱり優勢ですな。フラットの存在感も強い西欧音楽との良い対比が出ていて面白い。</p>
+<p>あと、この名付け方で面白いのは「開」と「閉」の対が保存されていることですな。比は256/243≒1.053498から16/15≒1.066667に変わっているけど。</p>
+
 </body>
