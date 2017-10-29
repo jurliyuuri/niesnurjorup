@@ -13,7 +13,7 @@ function drawTable(arr)
 				if(j==-1){str+='<td>'+arr[i][0]+'</td>';} else{
 					var val = arr[i][1]/arr[j][1];
 					str+= '<td class="s' + (isHarmonic(val) ? 2:1) + '">';
-					str+= val.toPrecision(5) +'</td>';
+					str+= val.toPrecision(4) +'</td>';
 				}
 			}
 
