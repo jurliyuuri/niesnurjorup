@@ -10,6 +10,7 @@
 .s3{background-color: #6d9eeb;}
 .s2{background-color: #c9daf8;}
 .s1{background-color: #f4cccc;}
+.s4{background-color: #dddddd;}
 </style>
 </head>
 <body class="cool">
@@ -43,7 +44,7 @@
 <p>ちなみに、これは整数値での最小二乗法による。小数値含めた場合ってどうなるんだろう。</p>
 
 <h2>3. 移調と音律</h2>
-<h3>3-1. 基礎</h3>
+<h3 id="i3_1">3-1. 基礎</h3>
 <p>さて、歴史的経緯を逆順に辿って、まず12平均律の元で移調をしよう。異名同音について考えて、そこから純正律とかでの異名異音について考えよう。</p>
 <p>長音階7音:</p>
 <img src="img/7sound.png" width="432"/>
@@ -127,7 +128,7 @@
 </div>
 <p>これらを「六」とかとしなかったのは、「一二三四五」が固まったあとに派生したものだからだろう。</p>
 <p>この方針で進めていくと、次のようになる。</p>
-<table>
+<table id="one_half">
 	<tr><td>開一</td><td>開四</td><td>開二</td><td>開五</td><td>開三</td><td>一</td><td>四</td><td>二</td><td>五</td><td>三</td><td>閉一</td><td>閉四</td><td>閉二</td><td>閉五</td><td>閉三</td></tr>
 	<tr><td>256/243</td><td>128/81</td><td>32/27</td><td>16/9</td><td>4/3</td><td>1</td><td>3/2</td><td>9/8</td><td>27/16</td><td>81/64</td><td>243/128</td><td>729/512</td><td>2187/2048</td><td>6561/4096</td><td>19683/16384</td></tr>
 </table>
@@ -174,7 +175,7 @@
 <p>むー。</p>
 <p>もうちょい見やすい方法で考えをしてみるか。Wikipediaにあった表を参考に</p>
 
-<table border="1" cellpadding="3" cellspacing="0">
+<table border="1" cellpadding="3" cellspacing="0" id="big_table">
 	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/24</td><td>閉五<br>25/16</td><td>閉三<br>75/64</td><td>再閉一<br>225/256</td><td></td><td></td></tr>
 	<tr><td>一<br>80/81</td><td>四<br>40/27</td><td class="s2">二<br>10/9</td><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td><td>閉二<br>135/128</td><td></td></tr>
 	<tr><td>開四<br>128/81</td><td>開二<br>32/27</td><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td><td>五<br>27/16</td><td>三<br>81/64</td></tr>
@@ -241,5 +242,66 @@
 <p>表の現世側からはシ♯ミ♯ラ♯ソ♭ド♭ファ♭の6つの名前が消えているが、現世には7*3種があるのに対しラネーメには5*3種のみがあるのだからこの差は必然である。不足している分は平均律を使えば解決できるし、そうでなくとも再開・再閉を用いれば良いのだから実用上・運用上の問題はない。</p>
 <h3>3-7. 用語改定</h3>
 <p><a href="https://github.com/jurliyuuri/niesnurjorup/blob/master/conversation.txt">会話</a>をしたところ、今まで使っていた「層」という字より「再」の方が良いと言われたので、改定した。ちなみにこのファイル自体を書き換えたので、「層」であったという痕跡はこの節とかスクショとかgitの過去バージョンとかにしかない。</p>
+<h3>3-8. 七音階での移調</h3>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td></td></tr>
+	<tr><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td></tr>
+</table>
+<p>要するに、この7マスからなるのが長音階。これをそれぞれの調に移調しよう。</p>
+<p>といっても、用語自体はピタゴラス音律と一緒なのだから、<a href="#one_half">3/2倍の表</a>から区切るのと同じ結果が得られるわけではある。</p>
 
+<p>あ、その前に。<a href="#i3_1">3-1.</a>では「二開五閉」とか書いてあるけどこれ間違いですな。現世につられてしまっている。「<a href="#one_half">3/2倍の表</a>から区切る」のが正しいのだから、</p>
+<table id="one_half">
+	<tr><td>開一</td><td>開四</td><td>開二</td><td>開五</td><td>開三</td><td>一</td><td>四</td><td>二</td><td>五</td><td>三</td><td>閉一</td><td>閉四</td><td>閉二</td><td>閉五</td><td>閉三</td></tr>
+</table>
+<p>を区切って、</p>
+<img src="img/7sound_new.png" width="330" />
+<p>という感じでいいんじゃないかな。調名は上から順に「五閉二再」「五閉一再」「五閉」「四閉」「三閉」「二閉」「一開一閉」「二開」「三開」「四開」「五開」「五開一再」「五開二再」でいいでしょ、「閉二」とかとの混同を防ぐために「無開二閉」とかと明確化することもあるだろうけど。</p>
+<p>待てよ、ラネーメ人って「一開一閉」と「一閉一開」のどっちを好むんだ？</p>
+<p>分からないので訊いてみよう。</p>
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a href="https://twitter.com/S_Y15?ref_src=twsrc%5Etfw">@s_y15</a> ラネーメ人って「一開一閉」と「一閉一開」のどっちを好むかな？</p>&mdash; .sozysozbot.@hsjoihs (@sosoBOTpi) <a href="https://twitter.com/sosoBOTpi/status/925104268067069952?ref_src=twsrc%5Etfw">2017年10月30日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h3>3-9. 純正律用の厳密音高表記</h3>
+<p>移調の話をやったが、なぜ純正律の導入まで待ったかというと、三和音を導入したいからだ。ただ、純正律は同名異音があるので、純正律用の厳密音高表記考えるか。</p>
+<p><a href="#big_table">さっきの表</a>で一段高いところにある同名は、周波数80/81倍の関係。<a href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%B3%E3%83%88%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B3%E3%83%B3%E3%83%9E">シントニックコンマ</a>ですな。</p>
+<p>さて、どう名付けるべきか。「大」「中」「小」も考えたが、正直オクターブに使いそうなんだよなぁ。</p>
+<p>「豊」「普」「貧」で行くか。弦が長いやつの方が「豊」なので一段高いところにある同名が「豊」。なんか違うような気もするが、まあそれは後で直せばいい。</p>
+<p>まず、純正律に（この音律に名前つけたいな）あるやつに「普」をつける。</p>
+<table border="1" cellpadding="3" cellspacing="0" id="big_table">
+	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/24</td><td>閉五<br>25/16</td><td>閉三<br>75/64</td><td>再閉一<br>225/256</td><td></td><td></td></tr>
+	<tr><td>一<br>80/81</td><td>四<br>40/27</td><td>二<br>10/9</td><td class="s4">普五<br>5/3</td><td class="s4">普三<br>5/4</td><td class="s4">普閉一<br>15/8</td><td class="s4">普閉四<br>45/32</td><td>閉二<br>135/128</td><td></td></tr>
+	<tr><td>開四<br>128/81</td><td>開二<br>32/27</td><td class="s4">普開五<br>16/9</td><td class="s4">普開三<br>4/3</td><td class="s4">普一<br>1</td><td class="s4">普四<br>3/2</td><td class="s4">普二<br>9/8</td><td>五<br>27/16</td><td>三<br>81/64</td></tr>
+	<tr><td></td><td>再開五<br>256/135</td><td>再開三<br>64/45</td><td class="s4">普開一<br>16/15</td><td class="s4">普開四<br>8/5</td><td class="s4">普開二<br>6/5</td><td>開五<br>9/5</td><td>開三<br>27/20</td><td>一<br>81/80</td></tr>
+	<tr><td></td><td></td><td>再開一<br>256/225</td><td>再開四<br>128/75</td><td>再開二<br>32/25</td><td>再開五<br>48/25</td><td>再開三<br>36/25</td><td>開一<br>27/25<br></td><td>開四<br>81/50</td></tr>
+</table>
+<p>なるほど、音律の設計からして、右斜めに移動するときに「普」性が保たれているな。ダイスロールで選んだものなのに、結果的に構造をよく表してくれていて面白い。</p>
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ダイスロールで決めたはずのものが結果的にうまく予定調和してくれて嬉しい <a href="https://twitter.com/hashtag/%E3%83%A9%E3%83%8D%E3%83%BC%E3%83%A1%E9%9F%B3%E6%A5%BD%E5%8F%B2?src=hash&amp;ref_src=twsrc%5Etfw">#ラネーメ音楽史</a> <a href="https://twitter.com/hashtag/jurli?src=hash&amp;ref_src=twsrc%5Etfw">#jurli</a></p>&mdash; .sozysozbot.@hsjoihs (@sosoBOTpi) <a href="https://twitter.com/sosoBOTpi/status/925112817522372608?ref_src=twsrc%5Etfw">2017年10月30日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>ということは、この灰色の列は右斜めに伸ばすことができて、</p>
+<table border="1" cellpadding="3" cellspacing="0" id="big_table">
+	<tr><td>三<br>100/81</td><td>閉一<br>25/27</td><td>閉四<br>25/18</td><td>閉二<br>25/24</td><td class="s4">普閉五<br>25/16</td><td class="s4">普閉三<br>75/64</td><td class="s4">普再閉一<br>225/256</td><td class="s4"></td><td class="s4"></td></tr>
+	<tr><td>一<br>80/81</td><td>四<br>40/27</td><td>二<br>10/9</td><td class="s4">普五<br>5/3</td><td class="s4">普三<br>5/4</td><td class="s4">普閉一<br>15/8</td><td class="s4">普閉四<br>45/32</td><td class="s4">普閉二<br>135/128</td><td></td></tr>
+	<tr><td>開四<br>128/81</td><td>開二<br>32/27</td><td class="s4">普開五<br>16/9</td><td class="s4">普開三<br>4/3</td><td class="s4">普一<br>1</td><td class="s4">普四<br>3/2</td><td class="s4">普二<br>9/8</td><td>五<br>27/16</td><td>三<br>81/64</td></tr>
+	<tr><td></td><td class="s4">普再開五<br>256/135</td><td class="s4">普再開三<br>64/45</td><td class="s4">普開一<br>16/15</td><td class="s4">普開四<br>8/5</td><td class="s4">普開二<br>6/5</td><td>開五<br>9/5</td><td>開三<br>27/20</td><td>一<br>81/80</td></tr>
+	<tr><td class="s4"></td><td class="s4"></td><td class="s4">普再開一<br>256/225</td><td class="s4">普再開四<br>128/75</td><td class="s4">普再開二<br>32/25</td><td>再開五<br>48/25</td><td>再開三<br>36/25</td><td>開一<br>27/25<br></td><td>開四<br>81/50</td></tr>
+</table>
+<p>あとは、残る音に「豊」「貧」を振れば</p>
+<table border="1" cellpadding="3" cellspacing="0" id="big_table">
+	<tr><td class="s1">豊三<br>100/81</td><td class="s1">豊閉一<br>25/27</td><td class="s1">豊閉四<br>25/18</td><td class="s1">豊閉二<br>25/24</td><td class="s4">普閉五<br>25/16</td><td class="s4">普閉三<br>75/64</td><td class="s4">普再閉一<br>225/256</td><td class="s4"></td><td class="s4"></td></tr>
+	<tr><td class="s1">豊一<br>80/81</td><td class="s1">豊四<br>40/27</td><td class="s1">豊二<br>10/9</td><td class="s4">普五<br>5/3</td><td class="s4">普三<br>5/4</td><td class="s4">普閉一<br>15/8</td><td class="s4">普閉四<br>45/32</td><td class="s4">普閉二<br>135/128</td><td class="s2"></td></tr>
+	<tr><td class="s1">豊開四<br>128/81</td><td class="s1">豊開二<br>32/27</td><td class="s4">普開五<br>16/9</td><td class="s4">普開三<br>4/3</td><td class="s4">普一<br>1</td><td class="s4">普四<br>3/2</td><td class="s4">普二<br>9/8</td><td class="s2">貧五<br>27/16</td><td class="s2">貧三<br>81/64</td></tr>
+	<tr><td class="s1"></td><td class="s4">普再開五<br>256/135</td><td class="s4">普再開三<br>64/45</td><td class="s4">普開一<br>16/15</td><td class="s4">普開四<br>8/5</td><td class="s4">普開二<br>6/5</td><td class="s2">貧開五<br>9/5</td><td class="s2">貧開三<br>27/20</td><td class="s2">貧一<br>81/80</td></tr>
+	<tr><td class="s4"></td><td class="s4"></td><td class="s4">普再開一<br>256/225</td><td class="s4">普再開四<br>128/75</td><td class="s4">普再開二<br>32/25</td><td class="s2">貧再開五<br>48/25</td><td class="s2">貧再開三<br>36/25</td><td class="s2">貧開一<br>27/25<br></td><td class="s2">貧開四<br>81/50</td></tr>
+</table>
+<p>ええやん。そして、ここまで構造が見えていたら、この区切りをわざわざ斜めにはしないだろうなぁ。</p>
+<table border="1" cellpadding="3" cellspacing="0" id="big_table">
+	<tr><td class="s1">豊三<br>100/81</td><td class="s1">豊閉一<br>25/27</td><td class="s1">豊閉四<br>25/18</td><td class="s1">豊閉二<br>25/24</td><td class="s4">普閉五<br>25/16</td><td class="s4">普閉三<br>75/64</td><td class="s4">普再閉一<br>225/256</td><td class="s4"></td><td class="s4"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1">豊一<br>80/81</td><td class="s1">豊四<br>40/27</td><td class="s1">豊二<br>10/9</td><td class="s4">普五<br>5/3</td><td class="s4">普三<br>5/4</td><td class="s4">普閉一<br>15/8</td><td class="s4">普閉四<br>45/32</td><td class="s4">普閉二<br>135/128</td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1"></td><td class="s1">豊開四<br>128/81</td><td class="s1">豊開二<br>32/27</td><td class="s4">普開五<br>16/9</td><td class="s4">普開三<br>4/3</td><td class="s4">普一<br>1</td><td class="s4">普四<br>3/2</td><td class="s4">普二<br>9/8</td><td class="s2">貧五<br>27/16</td><td class="s2">貧三<br>81/64</td><td class="s2"></td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s4">普再開五<br>256/135</td><td class="s4">普再開三<br>64/45</td><td class="s4">普開一<br>16/15</td><td class="s4">普開四<br>8/5</td><td class="s4">普開二<br>6/5</td><td class="s2">貧開五<br>9/5</td><td class="s2">貧開三<br>27/20</td><td class="s2">貧一<br>81/80</td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s4"></td><td class="s4"></td><td class="s4">普再開一<br>256/225</td><td class="s4">普再開四<br>128/75</td><td class="s4">普再開二<br>32/25</td><td class="s2">貧再開五<br>48/25</td><td class="s2">貧再開三<br>36/25</td><td class="s2">貧開一<br>27/25<br></td><td class="s2">貧開四<br>81/50</td></tr>
+</table>
+<p>なるほどなぁ。</p>
 </body>
