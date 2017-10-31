@@ -214,7 +214,7 @@
 	<tr><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td></tr>
 	<tr><td></td><td>開一<br>16/15</td><td class="s2">開四<br>8/5</td><td class="s2">開二<br>6/5</td><td></td></tr>
 </table>
-<p>順番に並べるなら</p>
+<p id="order">順番に並べるなら</p>
 <table border="1" style="text-align:center">
 	<tr><td colspan="2">一<br>1</td><td colspan="2">開一<br>16/15</td><td colspan="2">二<br>9/8</td><td colspan="2">開二<br>6/5</td><td colspan="2">三<br>5/4</td><td colspan="2">開三<br>4/3</td></td><td colspan="2">閉四<br>45/32</td><td colspan="2">四<br>3/2</td><td colspan="2">開四<br>8/5</td><td colspan="2">五<br>5/3</td><td colspan="2">開五<br>16/9</td><td colspan="2">閉一<br>15/8</td><td colspan="2">一<br>2</td></tr>
 	<tr><td colspan="1"></td><td colspan="2">16/15</td><td colspan="2">135/128</td><td colspan="2">16/15</td><td colspan="2">25/24</td><td colspan="2">16/15</td><td colspan="2">135/128</td><td colspan="2">16/15</td><td colspan="2">16/15</td><td colspan="2">25/24</td><td colspan="2">16/15</td><td colspan="2">135/128</td><td colspan="2">16/15</td><td colspan="1"></td></tr>
@@ -297,11 +297,82 @@
 </table>
 <p>ええやん。そして、ここまで構造が見えていたら、この区切りをわざわざ斜めにはしないだろうなぁ。</p>
 <table border="1" cellpadding="3" cellspacing="0" id="big_table">
-	<tr><td class="s1">豊三<br>100/81</td><td class="s1">豊閉一<br>25/27</td><td class="s1">豊閉四<br>25/18</td><td class="s1">豊閉二<br>25/24</td><td class="s4">普閉五<br>25/16</td><td class="s4">普閉三<br>75/64</td><td class="s4">普再閉一<br>225/256</td><td class="s4"></td><td class="s4"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
-	<tr><td class="s1"></td><td class="s1">豊一<br>80/81</td><td class="s1">豊四<br>40/27</td><td class="s1">豊二<br>10/9</td><td class="s4">普五<br>5/3</td><td class="s4">普三<br>5/4</td><td class="s4">普閉一<br>15/8</td><td class="s4">普閉四<br>45/32</td><td class="s4">普閉二<br>135/128</td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
-	<tr><td class="s1"></td><td class="s1"></td><td class="s1">豊開四<br>128/81</td><td class="s1">豊開二<br>32/27</td><td class="s4">普開五<br>16/9</td><td class="s4">普開三<br>4/3</td><td class="s4">普一<br>1</td><td class="s4">普四<br>3/2</td><td class="s4">普二<br>9/8</td><td class="s2">貧五<br>27/16</td><td class="s2">貧三<br>81/64</td><td class="s2"></td><td class="s2"></td></tr>
-	<tr><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s4">普再開五<br>256/135</td><td class="s4">普再開三<br>64/45</td><td class="s4">普開一<br>16/15</td><td class="s4">普開四<br>8/5</td><td class="s4">普開二<br>6/5</td><td class="s2">貧開五<br>9/5</td><td class="s2">貧開三<br>27/20</td><td class="s2">貧一<br>81/80</td><td class="s2"></td></tr>
+	<tr><td class="s1">豊三<br>100/81</td><td class="s1">豊閉一<br>50/27</td><td class="s1">豊閉四<br>25/18</td><td class="s1">豊閉二<br>25/24</td><td class="s4">普閉五<br>25/16</td><td class="s4">普閉三<br>75/64</td><td class="s4">普再閉一<br>225/128</td><td class="s4"></td><td class="s4"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
+	<tr><td class="s1">豊開三<br>320/243</td><td class="s1">豊一<br>80/81</td><td class="s1">豊四<br>40/27</td><td class="s1">豊二<br>10/9</td><td class="s4">普五<br>5/3</td><td class="s4">普三<br>5/4</td><td class="s4">普閉一<br>15/8</td><td class="s4">普閉四<br>45/32</td><td class="s4">普閉二<br>135/128</td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1">豊開一<br>256/243</td><td class="s1">豊開四<br>128/81</td><td class="s1">豊開二<br>32/27</td><td class="s4">普開五<br>16/9</td><td class="s4">普開三<br>4/3</td><td class="s4">普一<br>1</td><td class="s4">普四<br>3/2</td><td class="s4">普二<br>9/8</td><td class="s2">貧五<br>27/16</td><td class="s2">貧三<br>81/64</td><td class="s2">貧閉一<br>243/128</td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s4">普再開五<br>256/135</td><td class="s4">普再開三<br>64/45</td><td class="s4">普開一<br>16/15</td><td class="s4">普開四<br>8/5</td><td class="s4">普開二<br>6/5</td><td class="s2">貧開五<br>9/5</td><td class="s2">貧開三<br>27/20</td><td class="s2">貧一<br>81/80</td><td class="s2">貧四<br>243/160</td></tr>
 	<tr><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s4"></td><td class="s4"></td><td class="s4">普再開一<br>256/225</td><td class="s4">普再開四<br>128/75</td><td class="s4">普再開二<br>32/25</td><td class="s2">貧再開五<br>48/25</td><td class="s2">貧再開三<br>36/25</td><td class="s2">貧開一<br>27/25<br></td><td class="s2">貧開四<br>81/50</td></tr>
 </table>
+<p>なるほどなぁ。他の表も書き直すか。</p>
+<p>音律：</p>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td>閉四<br>45/32</td><td></td></tr>
+	<tr><td class="s2">開五<br>16/9</td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td></tr>
+	<tr><td></td><td></td><td>開一<br>16/15</td><td class="s2">開四<br>8/5</td><td class="s2">開二<br>6/5</td></tr>
+</table>
+<p>コード：</p>
+<table>
+	<tr><td>メジャーコード</td><td>マイナーコード</td><td>ディミニッシュ</td></tr>
+	<tr><td>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">■</td><td></td><td></td></tr>
+	<tr><td></td><td class="s2">■</td><td class="s2">■</td></tr>
+</table>	</td><td>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">■</td><td class="s2">■</td><td></td></tr>
+	<tr><td></td><td></td><td class="s2">■</td></tr>
+</table>	</td><td>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">■</td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td class="s2">■</td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td class="s2">■</td></tr>
+</table>	</td></tr></table>
+<p>七音階：</p>
+<table border="1" cellpadding="3" cellspacing="0">
+	<tr><td class="s2">五<br>5/3</td><td class="s2">三<br>5/4</td><td>閉一<br>15/8</td><td></td><td></td></tr>
+	<tr><td></td><td class="s2">開三<br>4/3</td><td class="s3">一<br>1</td><td class="s2">四<br>3/2</td><td class="s2">二<br>9/8</td></tr>
+</table>
 <p>なるほどなぁ。</p>
+
+<h3>3-10. 音高と音程</h3>
+<p>音高を表す表現はできたけど、音程（厳密義の方。二つの音の周波数比。）はどうしよう。普通に「普四於普一」とかでいいかな。長いけど。</p>
+<p>長いからこそ、「普四」と略されて音高と音程が混同されそう。まあそれもいいんじゃない？「貧五於普二、此普四。」みたいな。</p>
+<p>あ、ただ、「普開一於普一」はただの「開」だな。これは伝統用語を踏襲するでしょ。</p>
+<p><a href="#order">「順番に並べるなら」の表</a>に音程を追記するなら、</p>
+<table border="1" style="text-align:center">
+	<tr><td colspan="2">普一<br>1</td><td colspan="2">普開一<br>16/15</td><td colspan="2">普二<br>9/8</td><td colspan="2">普開二<br>6/5</td><td colspan="2">普三<br>5/4</td><td colspan="2">普開三<br>4/3</td></td><td colspan="2">普閉四<br>45/32</td><td colspan="2">普四<br>3/2</td><td colspan="2">普開四<br>8/5</td><td colspan="2">普五<br>5/3</td><td colspan="2">普開五<br>16/9</td><td colspan="2">普閉一<br>15/8</td><td colspan="2">普一<br>2</td></tr>
+	<tr><td colspan="1"></td><td colspan="2">開<br>16/15</td><td colspan="2">普閉二<br>135/128</td><td colspan="2">開<br>16/15</td><td colspan="2">豊閉二<br>25/24</td><td colspan="2">開<br>16/15</td><td colspan="2">普閉二<br>135/128</td><td colspan="2">開<br>16/15</td><td colspan="2">開<br>16/15</td><td colspan="2">豊閉二<br>25/24</td><td colspan="2">開<br>16/15</td><td colspan="2">普閉二<br>135/128</td><td colspan="2">開<br>16/15</td><td colspan="1"></td></tr>
+	<tr><td colspan="1"></td><td colspan="4">普二<br>9/8</td><td colspan="4">豊二<br>10/9</td><td colspan="6">普開二<br>6/5</td><td colspan="4">豊二<br>10/9</td><td colspan="6">普開二<br>6/5</td><td colspan="1"></td></tr>
+</table>
+<p>「開」+「普閉二」+「開」=「普開二」か、当然ではあるけど分かりやすくていいなこれ。</p>
+<!--
+<h3>3-10. 53平均律</h3>
+<p>表を53平均律に適用するとこうなる。</p>
+<pre>
+24	2	33	11
+29	7	38	16
+34	12	43	21
+39	17	48	26
+44	22	0	31
+49	27	5	36
+1	32	10	41
+6	37	15	46
+11	42	20	51
+</pre>
+<p>普四を4回閉じた音（151875 / 131072 = 1.1587）と普五を5回開けた音（524288 / 455625
+= 1.1507）は、十二音表で見ると半音差ができそうだが、実際はほぼ同じ音である。まあ、実際の発見のプロセスでは普一と比べるだろうから、</p>
+<pre>
+13	44	22	0
+18	49	27	5
+23	1	32	10
+28	6	37	15
+33	11	42	20
+38	16	47	25
+43	21	52	30
+48	26	4	35
+0	31	9	40
+</pre>
 </body>
+<p>普一（1）と、貧五を8回閉じた音（69198046875 / 68719476736 = 1.0069）がほぼ同じ音であること、などと表現されたかもしれない。アマデウス・モーツァルトの父かなんかがいってたコンマの概念で表されたかもだけど。「全音が9つのコンマからなることは聞けば分かる」とかだっけ。</p>
+-->
+
