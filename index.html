@@ -368,9 +368,22 @@
 <tr><td>普閉一<br>15/8</td><td>普開一<br>16/15</td><td></td><td>普開二<br>6/5</td><td></td><td>普開三<br>4/3</td><td>普再開三<br>64/45</td><td></td><td>普開四<br>8/5</td><td></td><td>普開五<br>16/9</td><td></td><td>普一<br>1</td></tr></table>
 <p>全音階に限定する必要性もないな。ということで完全版がこちら。</p>
 <img src="img/純正律表.png" width="700"/>
-<!--
-<h3>3-10. 53平均律</h3>
-<p>表を53平均律に適用するとこうなる。</p>
+
+
+
+<h3>3-12. 53平均律</h3>
+
+<p>53音平均律について考えていこう。あれはlog<sub>2</sub>3 ≒ 84/53 （ちなみに84.003... / 53）であることに由来して、かつlog<sub>2</sub>5 ≒ 123/53 （ちなみに123.06...）なので、「開」16/15は2<sup>4 - 84/53 - 123/53</sup> = 2<sup>5/53</sup>と近似され、「普四於普一」3/2は2<sup>84/53 - 1</sup>=2<sup>31/53</sup>と近似される。</p>
+
+<p>ということで、表</p>
+<table border="1" cellpadding="3" cellspacing="0" id="big_table">
+	<tr><td class="s1">豊三<br>100/81</td><td class="s1">豊閉一<br>50/27</td><td class="s1">豊閉四<br>25/18</td><td class="s1">豊閉二<br>25/24</td><td class="s4">普閉五<br>25/16</td><td class="s4">普閉三<br>75/64</td><td class="s4">普再閉一<br>225/128</td><td class="s4"></td><td class="s4"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
+	<tr><td class="s1">豊開三<br>320/243</td><td class="s1">豊一<br>80/81</td><td class="s1">豊四<br>40/27</td><td class="s1">豊二<br>10/9</td><td class="s4">普五<br>5/3</td><td class="s4">普三<br>5/4</td><td class="s4">普閉一<br>15/8</td><td class="s4">普閉四<br>45/32</td><td class="s4">普閉二<br>135/128</td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1">豊開一<br>256/243</td><td class="s1">豊開四<br>128/81</td><td class="s1">豊開二<br>32/27</td><td class="s4">普開五<br>16/9</td><td class="s4">普開三<br>4/3</td><td class="s4">普一<br>1</td><td class="s4">普四<br>3/2</td><td class="s4">普二<br>9/8</td><td class="s2">貧五<br>27/16</td><td class="s2">貧三<br>81/64</td><td class="s2">貧閉一<br>243/128</td><td class="s2"></td></tr>
+	<tr><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s4">普再開五<br>256/135</td><td class="s4">普再開三<br>64/45</td><td class="s4">普開一<br>16/15</td><td class="s4">普開四<br>8/5</td><td class="s4">普開二<br>6/5</td><td class="s2">貧開五<br>9/5</td><td class="s2">貧開三<br>27/20</td><td class="s2">貧一<br>81/80</td><td class="s2">貧四<br>243/160</td></tr>
+	<tr><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s4"></td><td class="s4"></td><td class="s4">普再開一<br>256/225</td><td class="s4">普再開四<br>128/75</td><td class="s4">普再開二<br>32/25</td><td class="s2">貧再開五<br>48/25</td><td class="s2">貧再開三<br>36/25</td><td class="s2">貧開一<br>27/25<br></td><td class="s2">貧開四<br>81/50</td></tr>
+</table>
+<p>の構造を53平均律で読み替えるとこうなる。</p>
 <pre>
 24	2	33	11
 29	7	38	16
@@ -395,9 +408,16 @@
 48	26	4	35
 0	31	9	40
 </pre>
-</body>
 <p>普一（1）と、貧五を8回閉じた音（69198046875 / 68719476736 = 1.0069）がほぼ同じ音であること、などと表現されたかもしれない。アマデウス・モーツァルトの父かなんかがいってたコンマの概念で表されたかもだけど。「全音が9つのコンマからなることは聞けば分かる」とかだっけ。</p>
--->
+
+<p>「一」基準で取った音階はこんな感じか。（ただしa = 2<sup>1/53</sup>と置く）</p>
+
+<table border="1" style="text-align:center">
+	<tr><td colspan="2">普一<br>a<sup>0</sup></td><td colspan="2">普開一<br>a<sup>5</sup></td><td colspan="2">普二<br>a<sup>9</sup></td><td colspan="2">普開二<br>a<sup>14</sup></td><td colspan="2">普三<br>a<sup>17</sup></td><td colspan="2">普開三<br>a<sup>22</sup></td></td><td colspan="2">普閉四<br>a<sup>26</sup></td><td colspan="2">普四<br>a<sup>31</sup></td><td colspan="2">普開四<br>a<sup>36</sup></td><td colspan="2">普五<br>a<sup>39</sup></td><td colspan="2">普開五<br>a<sup>44</sup></td><td colspan="2">普閉一<br>a<sup>48</sup></td><td colspan="2">普一<br>a<sup>53</sup></td></tr>
+	<tr><td colspan="1"></td><td colspan="2">開<br>a<sup>5</sup></td><td colspan="2">普閉二<br>a<sup>4</sup></td><td colspan="2">開<br>a<sup>5</sup></td><td colspan="2">豊閉二<br>a<sup>3</sup></td><td colspan="2">開<br>a<sup>5</sup></td><td colspan="2">普閉二<br>a<sup>4</sup></td><td colspan="2">開<br>a<sup>5</sup></td><td colspan="2">開<br>a<sup>5</sup></td><td colspan="2">豊閉二<br>a<sup>3</sup></td><td colspan="2">開<br>a<sup>5</sup></td><td colspan="2">普閉二<br>a<sup>4</sup></td><td colspan="2">開<br>a<sup>5</sup></td><td colspan="1"></td></tr>
+	<tr><td colspan="1"></td><td colspan="4">普二<br>a<sup>9</sup></td><td colspan="4">豊二<br>a<sup>8</sup></td><td colspan="6">普開二<br>a<sup>14</sup></td><td colspan="4">豊二<br>a<sup>8</sup></td><td colspan="6">普開二<br>a<sup>14</sup></td><td colspan="1"></td></tr>
+</table>
+<p>ちなみにa<sup>5</sup>はD♭<sub>1</sub>であることからも分かるように、何度か言っているように（と思ったらそんなに言ってなかった）「開」は「シャープ」ではなく「全音上げてフラット」である。</p>
 
 <div id="menu">読み込み中…</div>
 <div id="menuButton" onclick="openClose()">≡</div>
